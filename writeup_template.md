@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images_output/solidYellowLeft-finded_lane.jpg "result image"
 
 ---
 
@@ -23,7 +23,13 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 5 steps. 
+1) I converted the images to grayscale.
+2) Apply Gaussian blur (kernel size = 5)
+3) Apply Canny edge detection (low_threshold = 60, high_threshold = 170)
+4) Apply region of interest for eliminate non relevant noise
+5) Apply hough transform
+6) Separating line segments and draw lane
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
